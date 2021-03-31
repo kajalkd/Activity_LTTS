@@ -1,0 +1,113 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <title>Win calculator for cricket match!</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        function fn1(){
+
+            var teamName1 = document.getElementById("teamName1").value;
+            var teamName2 = document.getElementById("teamName2").value;
+
+            var score1  = document.getElementById("score1").value
+            var score2 = document.getElementById("score2").value
+            var score1_arr = score1.split("/");
+            var score2_arr = score2.split("/");
+
+            if(score1_arr.length != 2)
+            {
+                alert("Invalid Input")
+                return false;
+                            }
+
+       
+
+            if(score2_arr.length != 2)
+            {
+                    alert("Invalid Input")
+                    return false;
+                                }
+
+            var run1 = score1_arr[0] * 1;
+            var run2 = score2_arr[0] * 1;
+
+            var wicket1 = score1_arr[1] * 1;
+            var wicket2 = score2_arr[1] * 1;
+
+
+           
+
+            if (teamName1 == "" && teamName2 == "" || run1 == "" || run2 == "" || wicket1 == "" || wicket2 == ""   )
+            {
+                alert (" please fill all the fields")
+                return false;
+            }
+
+
+            if (run1 < 0 || run1 > 999) {
+            alert("Invalid  runs for  " + teamName1 + ", maximum three digits allowed");
+            return false;
+            }
+       
+            
+            if (run2 < 0 || run2 > 999) {
+                alert("Invalid   runs for " + teamName2 + ", maximum three digits allowed");
+                return false;
+            }
+            var rundiff = run1 - run2,
+            totalWicket = 10;
+
+            if (wicket1 < 0 || wicket1 > 10) {
+                alert("Invalid wickets for " + teamName1 + ", minimum value of zero and maximum value of 10 allowed");
+                return false;
+            }
+           
+            if (wicket2 < 0 || wicket2 > 10) {
+            alert("Invalid   wickets for " + teamName2 + ", minimum value of zero and maximum value of 10 allowed");
+            return false;
+            }
+            wicketDiff = (totalWicket) - (wicket2),
+            console.log(run1);
+            console.log(run2);
+            console.log(rundiff);
+            console.log(wicket2);
+            console.log(wicketDiff);
+            if (run1 > run2) {
+
+                alert(run1);
+                
+                document.write(teamName1 + " won by " + rundiff + "runs");
+            }
+            else {
+                document.write(teamName2 + " won by " + wicketDiff + "wickets");
+            }
+        }
+        </script>
+        <form name="myForm" onsubmit="return validateForm()">
+            <div>
+                <label id="teamName">Enter the Team Name 1</label>
+              
+              
+                <input type="text" id="teamName1" required>
+                <span><label style="margin-left:6%" id="run">Scoreboard</label></span>
+              
+         <span> <input  style="margin-left:5%" type="text" id="score1" required> </input></span>
+            </div> <br><br>
+            <div>
+                <label id="teamName">Enter the Team Name 2</label>
+               
+                
+                <input type="text" id="teamName2" required>
+                
+                <span><label style="margin-left:6%" id="run">Scoreboard</label></span>
+                <span> <input  style="margin-left:5%" type="text" id="score2" required> </input></span>
+            </div> <br><br>
+            <div>
+                <div>
+                    <input type="submit" onclick="fn1()" id="result" value="Result">          
+                </div>
+        </form>
+    </body>
+</html>
+
