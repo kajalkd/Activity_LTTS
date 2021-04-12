@@ -9,7 +9,7 @@
 npm install
 
 # Serve on localhost:3000
-npm start
+npm stop
 
 # Build for production
 npm run build
