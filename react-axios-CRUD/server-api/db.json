@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "id": "03a450b9-7cc7-4472-8a90-a1ac35c53b7f",
+      "name": "kk",
+      "email": "kajal@gmail.com"
+    },
+    {
+      "id": "19b280e6-442e-4a8d-9ad4-7783eff41bca",
+      "name": "AM",
+      "email": "abhi@hotmail.com"
+    },
+    {
+      "id": "411b7220-7d75-4882-9017-5d7a8de6f52a",
+      "name": "Sipy",
+      "email": "s@yahoo.co"
+    }
+  ]
+}
